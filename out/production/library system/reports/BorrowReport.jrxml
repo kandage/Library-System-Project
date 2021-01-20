@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-06T12:49:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BorrowReport" pageWidth="226" pageHeight="340" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ec390dc-ebf6-4524-a388-e2c064ec4765">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="BoDeId" class="java.lang.String"/>
+	<parameter name="RegId" class="java.lang.String"/>
+	<parameter name="BID " class="java.lang.String"/>
+	<parameter name="ISBN " class="java.lang.String"/>
+	<parameter name="Language" class="java.lang.String"/>
+	<parameter name="IssueDate" class="java.lang.String"/>
+	<parameter name="DueReturn " class="java.lang.String"/>
+	<parameter name="ReturnDate" class="java.lang.String"/>
+	<parameter name="ExpringDate" class="java.lang.String"/>
+	<parameter name="FineTotPrice" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from BorrowDetail]]>
+	</queryString>
+	<field name="BoDeId" class="java.lang.String"/>
+	<field name="RegId" class="java.lang.String"/>
+	<field name="BID" class="java.lang.String"/>
+	<field name="ISBN" class="java.lang.String"/>
+	<field name="Language" class="java.lang.String"/>
+	<field name="IssueDate" class="java.lang.String"/>
+	<field name="DueReturn" class="java.lang.String"/>
+	<field name="ReturnDate" class="java.lang.String"/>
+	<field name="ExpringDate" class="java.lang.String"/>
+	<field name="FineTotPrice" class="java.lang.Double"/>
+	<group name="BoDeId">
+		<groupExpression><![CDATA[$F{BoDeId}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="-3" y="3" width="188" height="30" uuid="130ed068-aeda-40a5-8e81-f50d700e11dd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Public Library Yakkalamulla]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="12" y="34" width="80" height="18" uuid="7e38308d-5ae0-4d31-a151-81cc01926491"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="106" y="33" width="84" height="18" uuid="afe8e94b-2a53-417f-bc1b-d56b21c6574e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-1" y="30" width="186" height="1" uuid="50bedc32-370c-4433-933f-8af8eca51647"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="205" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="70" height="20" uuid="d6782a63-8284-4ce2-9650-2d3b73e5fb83"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[BoDeId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="19" width="70" height="17" uuid="1186bb75-9cfa-47a0-aec4-dbb2ba0858f7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[RegId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="59" width="70" height="17" uuid="c919a50d-0789-469f-bc90-2c5002d68617"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="40" width="70" height="17" uuid="18e46553-821f-4a56-b130-98abfe0cbce3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[BID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="99" width="70" height="17" uuid="aa233637-a542-4dc6-8d79-987438b425ae"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[IssueDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="161" width="70" height="20" uuid="1a4ccc1b-7c88-497b-85d3-4b5d5a63ad12"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[ExpringDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="77" width="70" height="20" uuid="07b844ac-aac2-43de-b493-b7327a57e1cc"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="117" width="70" height="20" uuid="972afc62-17cf-417d-914f-b84d8f9920ed"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[DueReturn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="139" width="70" height="20" uuid="6c459bb5-8592-4c22-9f72-4c37bbf60a9e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[ReturnDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="183" width="70" height="20" uuid="f57681c7-767d-4f28-928f-943114ac8cc6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[FineTotPrice]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="0" width="100" height="19" uuid="beeeb8da-336e-4b70-a33b-a80b659c1018"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BoDeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="20" width="100" height="16" uuid="39048775-6258-4dd2-bc06-207d9909e025"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RegId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="42" width="100" height="15" uuid="0af395d4-6f65-4756-942c-100cceb610ae"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BID }]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="59" width="100" height="18" uuid="a00af4c8-e8fc-4a03-8ea7-47401d03460d"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ISBN }]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="80" width="100" height="17" uuid="ef3627ae-cc46-4c11-8708-575eb64dbefa"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Language}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="97" width="100" height="19" uuid="99cfe420-1d58-43ca-a60d-16df4fe6aa52"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IssueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="115" width="100" height="22" uuid="8a60da1a-5f8d-4c4c-84ea-9dcb9f00ba5f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DueReturn }]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="139" width="100" height="20" uuid="7d821ce3-f0f1-4f9e-bfa7-299e2ebb3ecf"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ReturnDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="159" width="100" height="22" uuid="616c97c3-ce8a-484b-b033-d5cfc3a29093"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpringDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="181" width="100" height="22" uuid="55e93551-4823-4ae4-94f3-458dce637467"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FineTotPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="50"/>
+	</summary>
+</jasperReport>

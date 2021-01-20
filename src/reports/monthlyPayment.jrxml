@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-08T21:11:28 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="monthlyPayment" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cfaecf4a-4dca-474a-8f30-14253c092cd6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString language="SQL">
+		<![CDATA[select * from payment where MONTH(PDate) = MONTH(curdate())]]>
+	</queryString>
+	<field name="PayID" class="java.lang.String"/>
+	<field name="RegId" class="java.lang.String"/>
+	<field name="Amount" class="java.lang.Double"/>
+	<field name="PDate" class="java.sql.Date"/>
+	<field name="PayType" class="java.lang.String"/>
+	<group name="PayID">
+		<groupExpression><![CDATA[$F{PayID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="95" y="0" width="275" height="25" uuid="651bcac9-9262-41cc-ab4c-e0ff0dcdd622">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Public Library Yakkalamulla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="25" width="205" height="15" uuid="a5932efc-ec21-442b-a23b-9efac2b4e45d"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Yakkalamulla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="40" width="205" height="15" uuid="ac471502-78c4-43b1-a75e-35e90466c806"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Galle.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="55" width="205" height="15" uuid="98d429db-7f9c-4372-84ea-6c9e5d360c78"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[0913567822,www.yakkalamullalibrary.lk]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="465" y="10" width="84" height="20" uuid="b085dcd2-f4fe-4d3a-8fb0-6c98bde083ea"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="415" y="10" width="50" height="20" uuid="2a4331e2-50a6-41bc-be42-0e0ce18cb442"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="30" width="50" height="20" uuid="385e3987-4dea-4c99-acf4-d09a2cc6369a"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Invoice #]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="465" y="30" width="84" height="20" uuid="72fa8b8b-fdac-429f-b212-23870f08a6f2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["INV0001"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="69" width="556" height="1" uuid="d0f8039b-75ac-4484-bc13-da39c1b15dfa">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="-1" width="138" height="20" forecolor="#000000" uuid="dd6b259d-f8ee-4905-8930-e95b2aafdf94"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RegId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="138" y="0" width="138" height="20" forecolor="#000000" uuid="70e5e9f5-5fe3-439b-bdfa-78cd3befb23c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-10" y="-2" width="576" height="1" uuid="535e3c6b-deda-401b-8792-01a3172abe3f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="-10" y="20" width="576" height="1" uuid="b76f1173-56ca-452b-84fe-ce8189854788">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="276" y="0" width="138" height="20" forecolor="#000000" uuid="a051e1c9-51d1-4205-95a3-de2a0b040684"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="414" y="0" width="138" height="20" forecolor="#000000" uuid="9c028b1f-4c1a-4262-94c4-7024d24a1e79"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PayType]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="9" width="556" height="20" forecolor="#000000" uuid="091aab27-7a26-41e1-84c9-2004367fc613"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PayID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="31" width="138" height="20" uuid="33dd5d07-a9de-4584-b64e-a2f42d780c38"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RegId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="138" y="31" width="138" height="20" uuid="c8f3923d-cbc2-4636-bb3b-6f1ded289d7f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="276" y="31" width="138" height="20" uuid="2c7c8a12-5868-4fa3-a9dd-d78a809ada1a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="414" y="31" width="138" height="20" uuid="a6ea5f4d-d090-40f1-ac98-48c0b592e936"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PayType}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="43" width="100" height="30" uuid="07b37fcd-f70a-49a5-8cff-0e6572faa2b2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Software by ijse]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

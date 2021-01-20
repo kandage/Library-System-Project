@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="437.0" prefWidth="1033.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageGuranteeFormController">
+   <children>
+      <ImageView fitHeight="437.0" fitWidth="854.0" layoutX="179.0" opacity="0.43" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/black-dark-vintage-pattern-6450.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="437.0" prefWidth="179.0" style="-fx-background-color: #95a5a6;">
+         <children>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="17.0" layoutY="163.0" onAction="#SaveOnActiion" prefHeight="38.0" prefWidth="151.0" text="Add Guaranrer">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="18.0" layoutY="204.0" onAction="#UpdateOnActiion" prefHeight="38.0" prefWidth="151.0" text="Update">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <JFXButton fx:id="btnHome" layoutX="41.0" layoutY="26.0" onAction="#HomeOnAction" prefHeight="95.0" prefWidth="103.0" text=".">
+         <graphic>
+            <ImageView fitHeight="65.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="199.0" layoutY="38.0" prefHeight="17.0" prefWidth="55.0" text="GID" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtGID" layoutX="308.0" layoutY="29.0" onAction="#getDataOnAction" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label layoutX="198.0" layoutY="109.0" prefHeight="17.0" prefWidth="55.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" layoutX="307.0" layoutY="104.0" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label layoutX="196.0" layoutY="155.0" prefHeight="17.0" prefWidth="55.0" text="GType" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtGtype" layoutX="305.0" layoutY="147.0" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label layoutX="197.0" layoutY="199.0" prefHeight="17.0" prefWidth="55.0" text="Mobile" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMobile" layoutX="306.0" layoutY="195.0" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label layoutX="197.0" layoutY="249.0" prefHeight="20.0" prefWidth="71.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" layoutX="306.0" layoutY="242.0" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label layoutX="197.0" layoutY="295.0" prefHeight="17.0" prefWidth="55.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmail" layoutX="306.0" layoutY="285.0" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <TableView fx:id="tblGuarantee" layoutX="455.0" layoutY="67.0" prefHeight="287.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="colGID" prefWidth="66.0" text="GID" />
+          <TableColumn fx:id="colName" prefWidth="84.0" text="Name" />
+            <TableColumn fx:id="colGType" prefWidth="75.0" text="GType" />
+            <TableColumn fx:id="colMobile" prefWidth="75.0" text="Mobile" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="colOperator" prefWidth="65.0" text="Operator" />
+            <TableColumn fx:id="colRegID" prefWidth="62.0" text="RegID" />
+        </columns>
+      </TableView>
+      <Label layoutX="197.0" layoutY="75.0" prefHeight="17.0" prefWidth="55.0" text="Reg ID" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRegID" layoutX="306.0" layoutY="66.0" prefHeight="25.0" prefWidth="140.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3523809523809524">
+               <stops>
+                  <Stop color="#0822e4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+   </children>
+</AnchorPane>

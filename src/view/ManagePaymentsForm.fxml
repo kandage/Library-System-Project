@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="437.0" prefWidth="1033.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagePaymentsFormController">
+   <children>
+      <AnchorPane prefHeight="437.0" prefWidth="179.0" style="-fx-background-color: #95a5a6;">
+         <children>
+            <JFXButton fx:id="btnHome" layoutX="15.0" layoutY="27.0" onAction="#HomeOnAction" prefHeight="118.0" prefWidth="118.0" text=".">
+               <graphic>
+                  <ImageView fitHeight="71.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="15.0" layoutY="198.0" onAction="#UpdateOnAction" prefHeight="42.0" prefWidth="150.0" text="Update">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="437.0" fitWidth="854.0" layoutX="179.0" opacity="0.43" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/black-dark-vintage-pattern-6450.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="205.0" layoutY="47.0" prefHeight="31.0" prefWidth="80.0" text="PayID" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="134.0" prefHeight="31.0" prefWidth="80.0" text="Amount" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="179.0" prefHeight="31.0" prefWidth="80.0" text="PDate" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="224.0" prefHeight="31.0" prefWidth="80.0" text="Type" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPayId" layoutX="313.0" layoutY="35.0" onAction="#getDataOnAction" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2200ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAmount" layoutX="315.0" layoutY="127.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2200ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPDate" layoutX="314.0" layoutY="174.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2200ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtType" layoutX="315.0" layoutY="219.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2200ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <TableView fx:id="tblPayments" layoutX="474.0" layoutY="63.0" prefHeight="265.0" prefWidth="552.0">
+        <columns>
+          <TableColumn fx:id="colPayID" prefWidth="74.0" text="PayID" />
+          <TableColumn fx:id="colRegId" prefWidth="97.0" text="RegId " />
+            <TableColumn fx:id="colAmount" prefWidth="104.0" text="Amount" />
+            <TableColumn fx:id="colPayDate" prefWidth="109.0" text="Pay Date" />
+            <TableColumn fx:id="colType" prefWidth="82.0" text="Type" />
+            <TableColumn fx:id="colOperator" prefWidth="110.0" text="Operator" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveOnActiion" buttonType="RAISED" layoutX="16.0" layoutY="154.0" onAction="#SaveOnActiion" prefHeight="42.0" prefWidth="150.0" text="Add Payment">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="479.0" layoutY="373.0" prefHeight="31.0" prefWidth="552.0" text="If You Want To Find THe Payment Details Please Type The Payment Id In PayID Possision" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="91.0" layoutX="258.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/coins_48px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="201.0" layoutY="97.0" prefHeight="31.0" prefWidth="80.0" text="regID" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRegid" layoutX="309.0" layoutY="85.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2200ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+   </children>
+</AnchorPane>

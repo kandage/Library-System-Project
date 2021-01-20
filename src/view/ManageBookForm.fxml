@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" opacity="0.95" prefHeight="437.0" prefWidth="1033.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageBookFormController">
+   <children>
+      <ImageView fitHeight="437.0" fitWidth="832.0" layoutX="201.0" layoutY="-1.0" opacity="0.43" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/black-dark-vintage-pattern-6450.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="437.0" prefWidth="179.0" style="-fx-background-color: #95a5a6;">
+         <children>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="35.0" layoutY="206.0" onAction="#SaveOnActiion" prefHeight="38.0" prefWidth="110.0" text="Add Book">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnViewAllBooksDetails" buttonType="RAISED" layoutX="1.0" layoutY="301.0" onAction="#ViewAllBooksDetailsOnAction" prefHeight="63.0" prefWidth="200.0" text="View All Books Details&#10;And Manage Books">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnHome" layoutX="31.0" layoutY="16.0" onAction="#HomeOnAction" prefHeight="95.0" prefWidth="103.0" text=".">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/home.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnReturnBook" buttonType="RAISED" layoutX="40.0" layoutY="119.0" onAction="#ReturnBookOnAction" text="Return Book">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnIssueBook" layoutX="38.0" layoutY="163.0" onAction="#IssueBookOnAction" prefHeight="38.0" prefWidth="110.0" text="Issue Book">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="38.0" layoutY="247.0" onAction="#ClearOnAction" prefHeight="38.0" prefWidth="110.0" text="Clear">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="214.0" layoutY="57.0" prefHeight="17.0" prefWidth="55.0" text="BID" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="213.0" layoutY="95.0" prefHeight="20.0" prefWidth="103.0" text="Book Name" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="212.0" layoutY="138.0" prefHeight="17.0" prefWidth="122.0" text="Title" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="212.0" layoutY="181.0" prefHeight="17.0" prefWidth="122.0" text="ISBN" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="212.0" layoutY="218.0" prefHeight="17.0" prefWidth="122.0" text="Language" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="212.0" layoutY="260.0" prefHeight="17.0" prefWidth="122.0" text="Catagory" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtBID" layoutX="354.0" layoutY="50.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtBookName" layoutX="354.0" layoutY="91.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtTitle" layoutX="353.0" layoutY="134.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtISBN" layoutX="354.0" layoutY="174.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtLanguage" layoutX="354.0" layoutY="213.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtCatagory" layoutX="355.0" layoutY="252.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <Label layoutX="212.0" layoutY="297.0" prefHeight="17.0" prefWidth="81.0" text="Author" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="214.0" layoutY="329.0" text="Price" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <Label layoutX="213.0" layoutY="369.0" text="Added Date" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="17.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtAuthor" layoutX="354.0" layoutY="290.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtPrice" layoutX="353.0" layoutY="327.0" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <JFXTextField fx:id="txtAddedDate" layoutX="353.0" layoutY="364.0" onAction="#saveOnAction" prefHeight="25.0" prefWidth="313.0" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css">
+         <unFocusColor>
+            <LinearGradient endX="0.7285714285714286" endY="0.6047619047619048" startX="0.30952380952380953" startY="0.33333333333333337">
+               <stops>
+                  <Stop color="WHITESMOKE" />
+                  <Stop color="#1f00e8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor></JFXTextField>
+      <ImageView fitHeight="358.0" fitWidth="200.0" layoutX="739.0" layoutY="112.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/iStock-984414446.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

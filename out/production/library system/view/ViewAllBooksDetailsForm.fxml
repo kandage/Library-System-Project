@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="437.0" prefWidth="1033.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewAllBooksDetailsFormController">
+   <children>
+      <ImageView fitHeight="437.0" fitWidth="1033.0" opacity="0.43" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/black-dark-vintage-pattern-6450.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBack" layoutX="14.0" layoutY="14.0" onAction="#BackOnAction" prefHeight="57.0" prefWidth="91.0" text=".">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/circled_chevron_left_24px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtBID" labelFloat="true" layoutX="8.0" layoutY="114.0" onAction="#getDataOnAction" prefHeight="25.0" prefWidth="81.0" promptText="BID" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="10.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/search_26px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtBookName" labelFloat="true" layoutX="93.0" layoutY="114.0" promptText="Book Name" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtTitle" labelFloat="true" layoutX="232.0" layoutY="114.0" promptText="Title" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtISBN" labelFloat="true" layoutX="370.0" layoutY="114.0" prefHeight="25.0" prefWidth="91.0" promptText="ISBN" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtLanguage" labelFloat="true" layoutX="466.0" layoutY="114.0" prefHeight="25.0" prefWidth="107.0" promptText="Language" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtCatagory" labelFloat="true" layoutX="580.0" layoutY="114.0" prefHeight="25.0" prefWidth="123.0" promptText="Catagory" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtAuthor" labelFloat="true" layoutX="708.0" layoutY="114.0" promptText="Author" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtPrice" labelFloat="true" layoutX="850.0" layoutY="114.0" prefHeight="25.0" prefWidth="75.0" promptText="Price" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <JFXTextField fx:id="txtAddedDate" labelFloat="true" layoutX="932.0" layoutY="114.0" prefHeight="25.0" prefWidth="98.0" promptText="Date Added" styleClass="txtTypeColor" stylesheets="@style/StylesSheet.css" unFocusColor="#2105f8" />
+      <TableView fx:id="tblBooks" layoutX="10.0" layoutY="164.0" prefHeight="233.0" prefWidth="1016.0" styleClass="table-row-cell:selected" stylesheets="@style/StylesSheet.css" AnchorPane.leftAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="colBID" prefWidth="74.0" text="BID" />
+          <TableColumn fx:id="colBookName" prefWidth="158.0" text="BookName" />
+            <TableColumn fx:id="colTitle" prefWidth="89.0" text="Title" />
+            <TableColumn fx:id="colISBN" prefWidth="95.0" text="ISBN" />
+            <TableColumn fx:id="colLanguage" prefWidth="116.0" text="Language" />
+            <TableColumn fx:id="colCatagory" prefWidth="106.0" text="Catagory" />
+            <TableColumn fx:id="colAuthor" prefWidth="112.0" text="Author" />
+            <TableColumn fx:id="colPrice" prefWidth="93.0" text="Price" />
+            <TableColumn fx:id="colAddedDate" prefWidth="100.0" text="AddedDate" />
+            <TableColumn fx:id="colOperator" prefWidth="72.0" text="Operator" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="908.0" layoutY="65.0" onAction="#UpdateOnAction" prefHeight="40.0" prefWidth="107.0" text="UPDATE">
+         <textFill>
+            <LinearGradient endX="0.5047619047619047" endY="0.9" startX="0.5952380952380951" startY="0.5761904761904761">
+               <stops>
+                  <Stop color="#00eb0c" />
+                  <Stop color="#ee0b0b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="12.0" layoutY="411.0" prefHeight="17.0" prefWidth="475.0" text="If You Want To Find The Book Details Type The Bok ID In BID  Position And Press Enter" textFill="WHITE" />
+   </children>
+</AnchorPane>
